@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
         <ThemeProvider
           attribute="class"
@@ -36,8 +36,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <header className="flex justify-between p-4 border-b">
-            <Link href="/dashboard" className="text-4xl font-semibold">
+          <header className="flex justify-between p-4 border-b shadow-sm dark:bg-blue-950 bg-cyan-800">
+            <Link href="/dashboard" className="text-4xl font-bold text-white ">
               Dashboard
             </Link>
             <ModeToggle />
