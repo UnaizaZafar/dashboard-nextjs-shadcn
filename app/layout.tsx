@@ -4,6 +4,7 @@ import { ThemeProvider } from "./components/ThemeProvider";
 import { ModeToggle } from "./components/ModeToggle";
 import Link from "next/link";
 import "./globals.css";
+import MapComponent from "./components/MapComponent";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -36,10 +37,13 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <header className="flex justify-between p-4 border-b">
-            <Link href="/dashboard" className="text-4xl font-semibold">Dashboard</Link>
+            <Link href="/dashboard" className="text-4xl font-semibold">
+              Dashboard
+            </Link>
             <ModeToggle />
           </header>
           {children}
+          <MapComponent />
         </ThemeProvider>
       </body>
     </html>
