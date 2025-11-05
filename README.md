@@ -33,8 +33,7 @@ The dashboard displays KPI cards, chart, a data table, and an integrated Google 
 
 1. **Clone the repository**
 
-   git clone <your-repo-url>
-   cd <project-folder>
-   npm install
-   npm run dev
-   http://localhost:3000/dashboard
+   - git clone (https://github.com/UnaizaZafar/dashboard-nextjs-shadcn.git)
+   - npm install
+   - npm run dev
+   - http://localhost:3000/dashboard
