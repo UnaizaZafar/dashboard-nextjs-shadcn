@@ -1,7 +1,7 @@
 # 📊 Next.js Dashboard (Task 2)
 
 A responsive dashboard built with **Next.js (App Router)**, **TypeScript**, **TailwindCSS**, and **shadcn/ui**.  
-The dashboard displays KPI cards, a data table, and an integrated Google Map using data fetched from a public API.
+The dashboard displays KPI cards, chart, a data table, and an integrated Google Map using data fetched from a public API.
 
 ---
 
@@ -14,6 +14,7 @@ The dashboard displays KPI cards, a data table, and an integrated Google Map usi
 - **API Integration:** Uses [DummyJSON Users API](https://dummyjson.com/users)
 - **Google Map Section:** Embedded Google map view
 - **KPI Cards:** Displays metrics like Total Users, Gender Distribution,Top 5 User Cities, Top 5 User Departments etc.
+- **Bar chart:** Displays metrics like Total number of products and categories etc.
 
 ---
 
@@ -23,6 +24,7 @@ The dashboard displays KPI cards, a data table, and an integrated Google Map usi
 - **TypeScript**
 - **TailwindCSS**
 - **shadcn/ui**
+- **rechart**
 - **next-themes**
 
 ---
