@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased flex flex-col justify-between h-full`}
       >
         <ThemeProvider
           attribute="class"
@@ -36,11 +36,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <header className="flex justify-between p-4 border-b shadow-sm dark:bg-blue-950 bg-cyan-800">
+          <header className=" p-4 border-b shadow-sm dark:bg-blue-950 bg-cyan-800 ">
+            <div className="flex justify-between max-w-screen-2xl mx-auto w-full">
             <Link href="/dashboard" className="text-4xl font-bold text-white ">
               Dashboard
             </Link>
             <ModeToggle />
+            </div>
           </header>
           {children}
           <MapComponent />
