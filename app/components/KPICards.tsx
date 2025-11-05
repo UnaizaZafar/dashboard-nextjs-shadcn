@@ -122,23 +122,25 @@ export function KPICards() {
     fetchAndCalculateMetrics();
   }, []);
   if (isLoading) {
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-8">
-      {/* Skeleton loading cards */}
-      {[1, 2, 3].map((i) => (
-        <Card key={i} className="animate-pulse">
-          <CardHeader className="pb-2">
-            <div className="h-4 w-3/4 rounded bg-gray-200 dark:bg-gray-700"></div>
-          </CardHeader>
-          <CardContent>
-            <div className="h-6 w-1/2 rounded bg-gray-300 dark:bg-gray-600 mb-4"></div>
-            <div className="space-y-2">
-              <div className="h-3 w-full rounded bg-gray-200 dark:bg-gray-700"></div>
-              <div className="h-3 w-11/12 rounded bg-gray-200 dark:bg-gray-700"></div>
-            </div>
-          </CardContent>
-        </Card>
-      ))}
-    </div>;
+    return (
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-8">
+        {/* Skeleton loading cards */}
+        {[1, 2, 3].map((i) => (
+          <Card key={i} className="animate-pulse">
+            <CardHeader className="pb-2">
+              <div className="h-4 w-3/4 rounded bg-gray-200 dark:bg-gray-700"></div>
+            </CardHeader>
+            <CardContent>
+              <div className="h-6 w-1/2 rounded bg-gray-300 dark:bg-gray-600 mb-4"></div>
+              <div className="space-y-2">
+                <div className="h-3 w-full rounded bg-gray-200 dark:bg-gray-700"></div>
+                <div className="h-3 w-11/12 rounded bg-gray-200 dark:bg-gray-700"></div>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    );
   }
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-8">
@@ -158,7 +160,7 @@ export function KPICards() {
             <div className="mt-4 space-y-2 text-sm">
               {metric.stats.map((stat, index) => (
                 <div key={index} className="flex justify-between">
-                  <span className="text-muted-foreground">{stat.label}:</span>
+                  <span className="text-white/90">{stat.label}:</span>
                   <span className="font-semibold">
                     {stat.count.toLocaleString()}
                   </span>
