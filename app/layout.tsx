@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { ModeToggle } from "./components/ModeToggle";
+import Link from "next/link";
 import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,7 +36,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <header className="flex justify-between p-4 border-b">
-            <p className="text-4xl font-semibold">Dashboard</p>
+            <Link href="/dashboard" className="text-4xl font-semibold">Dashboard</Link>
             <ModeToggle />
           </header>
           {children}
