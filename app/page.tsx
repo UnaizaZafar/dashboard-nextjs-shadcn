@@ -1,3 +1,9 @@
+import { DataTable } from "./components/DataTable";
+
 export default function Home() {
-  return <></>;
+  return (
+    <div className="w-10/12 mx-auto">
+      <DataTable />
+    </div>
+  );
 }
