@@ -198,7 +198,7 @@ export function DataTable() {
   }
   return (
     <div className="w-full">
-      <div className="overflow-hidden rounded-md border mt-5">
+      <div className="overflow-hidden rounded-md border">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
